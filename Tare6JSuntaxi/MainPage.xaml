@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tare6JSuntaxi.MainPage">
+
+    <StackLayout>
+        <Label Text="DEBER 6 Web Services" FontSize="20" HorizontalTextAlignment="Center"/>
+        <Label x:Name="texto" Text="" />
+
+        <Button Text="Consultar" x:Name="btnConsultar" Clicked="btnConsultar_Clicked" BackgroundColor="Blue" TextColor="White"/>
+
+        <ListView x:Name="MyListView" ItemSelected="MyListView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label x:Name="lblNombre" Text="{Binding nombre}" />
+                            <Label x:Name="lblApellido" Text="{Binding apellido}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="btnVistaInsertar" Text="Ir a Insertar" Clicked="btnVistaInsertar_Clicked" BackgroundColor="Blue" TextColor="White"/>
+
+    </StackLayout>
+
+</ContentPage>
+
